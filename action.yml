@@ -10,6 +10,9 @@ inputs:
     heroku_email_address:
         description: 'Heroku email address'
         required: true
+    working_directory:
+        description: 'Working directory for our cmd to be executed in'
+        default: './'
 
 outputs:
     status:

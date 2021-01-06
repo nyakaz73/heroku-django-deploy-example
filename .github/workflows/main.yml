@@ -19,5 +19,7 @@ jobs:
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }} 
           heroku_email_address: ${{ secrets.HEROKU_EMAIL_ADDRESS }} 
+          working_directory: ./tests/djangoherokuapp
+          heroku_app_name: django-heroku-123
       - name: Get the output status
         run: echo "${{ steps.login.outputs.status }}"
