@@ -57,7 +57,7 @@ deployToHeroku = ({ app_name }) => {
         console.log('***************************');
         console.log('--App Migration--')
         console.log('***************************');
-        const migrate = execSync('heroku run python manage.py migrate', execOptions).toString();
+        const migrate = execSync(`heroku run --app ${app_name} python manage.py migrate`, execOptions).toString();
         console.log(migrate);
 
         //Releasing the app
