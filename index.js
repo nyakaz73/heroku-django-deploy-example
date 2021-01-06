@@ -24,6 +24,7 @@ login = () => {
     try {
         createNetrcFileForLogin(heroku);
         const user = execSync('heroku auth:whoami').toString();
+        console.log(user);
         console.log(`Succeffully logged with user ${user}`);
     } catch (error) {
         console.log(error.message);
@@ -41,6 +42,6 @@ login();
 //Set output
 core.setOutput(
     "status",
-    "Successfully Logged"
+    "Successfully Signed In"
 );
 
